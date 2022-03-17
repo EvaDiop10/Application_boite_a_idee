@@ -1,16 +1,15 @@
-import React from 'react';
-import Listes from './components/Listes'
-const App = () => {
-              
-  return (
+import React from "react"
+import Formulaire from "./components/Formulaire";
+import Header from "./components/Header";
+import ListeCarte from "./components/ListeCarte";
+const App = () =>{
+    return(
     <div>
-      hello
-      <Listes/>
+            <Header></Header>
+            <Formulaire></Formulaire>
+            <ListeCarte></ListeCarte>
     </div>
-    
-  );
-  
-}
+    );
+ }
 
-
-export default App;
+ export default App;
