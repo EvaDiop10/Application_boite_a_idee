@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Carte from "./Carte";
 
-const ListeCarte = (idee) => {
+const ListeCarte = () => {
     const [data,setdata] = useState([]);    
 
     useEffect(() =>{
@@ -10,13 +10,15 @@ const ListeCarte = (idee) => {
         .then((response)=>setdata(response.data));
         
         console.log(data);
-    
+    }, []);
         return(
         <div className="ListCarte">
-                {data.map((idee)=>(
-                    <Carte Liste={idee} key={idee.titre} />
+                {data.map((listCarte)=>(
+                    <div className="listCarte">
+                        {listCarte}
+                    </div>
                     ))}
         </div>)
-        ); 
-}
-    export default ListeCarte;
+        ;
+};
+export default ListeCarte;

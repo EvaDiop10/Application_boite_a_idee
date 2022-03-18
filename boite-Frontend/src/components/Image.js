@@ -1,9 +1,8 @@
 import React from 'react';
-const Image = (props) => {
-    console.log(props)
+const Image = () => {
     return (
-        <div>
-            <image src="/undraw_Collecting_re_lp6p.png"></image>
+        <div class="col-6">
+            <image src="./img/undraw_Collecting_re_lp6p.png"></image>
         </div>
     );
 };
