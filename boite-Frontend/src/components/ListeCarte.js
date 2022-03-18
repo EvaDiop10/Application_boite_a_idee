@@ -3,21 +3,21 @@ import axios from "axios";
 import Carte from "./Carte";
 
 const ListeCarte = () => {
-    const [data,setdata] = useState([]);    
+    const [data,setData] = useState([]);  
+    
 
     useEffect(() =>{
         axios.get('http://127.0.0.1:8000/api/idees')
-        .then((response)=>setdata(response.data));
+        .then((response)=>setData(response.data));
         
-        console.log(data);
     }, []);
         return(
         <div className="ListCarte">
-                {data.map((listCarte)=>(
-                    <div className="listCarte">
-                        {listCarte}
-                    </div>
+            <ul  className="List-Carte">
+                {data.map((idee)=>(
+                    <Carte idee={idee} key={idee.id}></Carte>
                     ))}
+            </ul>
         </div>)
         ;
 };

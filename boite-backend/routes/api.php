@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\IdeeController;
+use App\Http\Controllers\API\IdeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,6 @@ use App\Http\Controllers\IdeeController;
 |
 */
 Route::apiResource("idees", IdeeController::class); // Les routes "idees.*" de l'API
-Route::get('/idees',[IdeeController::class,'index']);
-Route::post('/idees',[IdeeController::class,'store']);
-Route::get('/idees/{idee}',[IdeeController::class,'show']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
