@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState } from "react";
 import axios from "axios";
 import Carte from "./Carte";
 
+//import { description, metrique } from "../atoms/description";
+   
 const ListeCarte = () => {
-    const [data,setData] = useState([]);  
-    
-
+    const [data,setData] = useState([])
     useEffect(() =>{
-        axios.get('http://127.0.0.1:8000/api/idees')
+        axios.get('http://localhost:3000/idee')
         .then((response)=>setData(response.data));
         
     }, []);
-        return(
+    return(
         <div className="ListCarte">
             <ul  className="List-Carte">
                 {data.map((idee)=>(

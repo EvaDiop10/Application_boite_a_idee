@@ -16,24 +16,26 @@ const Formulaire = () =>{
         setContenuSaisi(e.target.value)
     }
 
+    
+
     return(
-    <div class="row">
-        <form class='col-6' onSubmit={handleChangeSubmit}>
-            <div class="mb-3 ">
-                <label  class="form-label">titre</label>
-                <input type="text" class="form-control"  placeholder="Exemple=Brief..." onChange={handleChangeTitre}></input>
+    <div className="row container">
+        <form className='col-6' onSubmit={handleChangeSubmit}>
+            <div className="mb-3 ">
+                <label  className="form-label">titre</label>
+                <input type="text" className="form-control"  placeholder="Exemple=Brief..." onChange={handleChangeTitre}></input>
             </div>
-            <div class="mb-3">
-                <label  class="form-label">Description</label>
-                <textarea class="form-control"  rows="3" onChange={handleChangeDescription}></textarea>
+            <div className="mb-3">
+                <label  className="form-label">Suggestion</label>
+                <textarea className="form-control"  rows="3" onChange={handleChangeDescription}></textarea>
                     <p style={{color: ContenuRestant < 0 ?'red':'green'}}>Contenu saisi {ContenuSaisi.length}
                     <span>/130</span>
                     </p>
                     <p >Contenu restant {longueurMAx-ContenuSaisi.length}</p>
 
             </div> 
-            <div class="mb-3">
-                <button type="button" class="btn btn-secondary">Envoyer</button>
+            <div className="mb-3">
+                <button type="button" className="btn btn-secondary">Envoyer</button>
             </div>
         </form>
     </div>

@@ -1,16 +1,15 @@
 import React from 'react';
 import Formulaire from './Formulaire';
-import Image from './Image';
 const SectionFormulaire = () => {
     
     return (
-        <div class="row ">
-            <div class="col-6">
+        <div className="row ">
+            <div className="col-6">
                 <Formulaire></Formulaire>
             </div>
-           <div class="col-6">
-                <Image></Image>
-           </div>
+            <div className="col-6">
+                <image src="/undraw_Collecting_re_lp6p.png" className='img-fluide'/>
+            </div>
         </div>
     );
 };
