@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Route::resource('idees','IdeeController');
-Route::get('/idees',[IdeeController::class,'index']);
-Route::post('/idees',[IdeeController::class,'store']);
+Route::get('/idees.index',[IdeeController::class,'index']);
+Route::post('/idees.store',[IdeeController::class,'store']);
 Route::get('/idees/{idee}',[IdeeController::class,'show']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

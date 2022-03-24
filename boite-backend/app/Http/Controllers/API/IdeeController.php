@@ -65,13 +65,20 @@ class IdeeController extends Controller
         
     // On modifie les informations de l'utilisateur
     $idee->update([
-        'libelle' => $idee->libelle,
-        'description' => $idee->description,
-        'statut' => $idee->statut
+        'libelle' => $request->libelle,
+        'description' => $request->description,
+        'statut' => $request->statut
     ]);
+    
 
     // On retourne la réponse JSON
     return response()->json();
+    }
+    public function ChangeStatut(Idee $idee)
+    {
+        $idee->update([
+            'statut' => !$idee->statut
+        ]);
     }
 
     /**
@@ -82,6 +89,10 @@ class IdeeController extends Controller
      */
     public function destroy(Idee $idee)
     {
-        //
+        $idee->destroy([
+            'libelle' => $idee->libelle,
+            'description' => $idee->description,
+            'statut' => $idee->statut
+        ]);
     }
 }

@@ -2,21 +2,22 @@ import React, {useEffect, useState } from "react";
 import axios from "axios";
 import Carte from "./Carte";
 
-//import { description, metrique } from "../atoms/description";
-   
 const ListeCarte = () => {
     const [data,setData] = useState([])
     useEffect(() =>{
-        axios.get('http://localhost:3000/idee')
+        axios.get('http://127.0.0.1:8000/api/idees')
         .then((response)=>setData(response.data));
         
     }, []);
+    let [Approuve,refuse]= [0,0]
     return(
         <div className="ListCarte">
             <ul  className="List-Carte">
-                {data.map((idee)=>(
-                    <Carte idee={idee} key={idee.id}></Carte>
-                    ))}
+                {data && data.map(idee=> {
+                   idee.statut ? Approuve++ : refuse++;
+                    return <Carte idee={idee} key={idee.id}/>
+                    })
+                }
             </ul>
         </div>)
         ;
