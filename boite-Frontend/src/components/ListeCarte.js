@@ -9,17 +9,15 @@ const ListeCarte = () => {
         .then((response)=>setData(response.data));
         
     }, []);
-    let [Approuve,refuse]= [0,0]
     return(
         <div className="ListCarte">
             <ul  className="List-Carte">
-                {data && data.map(idee=> {
-                   idee.statut ? Approuve++ : refuse++;
-                    return <Carte idee={idee} key={idee.id}/>
-                    })
-                }
+                {data.map((idee)=> (
+                <Carte idee={idee} key={idee.id}/>
+                )
+                )}
             </ul>
-        </div>)
-        ;
+        </div>
+    );
 };
 export default ListeCarte;

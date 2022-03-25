@@ -23,12 +23,10 @@ const Formulaire = () =>{
     const Submit = ()=>{
         let idee = {libelle,description,statut}
          axios.post('http://127.0.0.1:8000/api/idees',idee)
-         window.location.reload(false);
     }
-
     return(
-    <div className="row container">
-        <form className='col-6' >
+    <div className="row">
+        <form className='' >
             <div className="mb-3 ">
                 <label  className="form-label" >titre</label>
                 <input type="text" value={libelle}  className="form-control" name="libelle"  placeholder="Exemple=Brief..." onChange= {handleChangeTitre} />

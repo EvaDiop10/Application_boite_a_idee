@@ -3,13 +3,12 @@ import Formulaire from './Formulaire';
 const SectionFormulaire = () => {
     
     return (
-        <div className="row ">
+        <div className="row  container">
             <div className="col-6">
                 <Formulaire></Formulaire>
             </div>
             <div className="col-6">
-                <image src="/im
-                Idee.png" className='img-fluide'/>
+                <img src="/BoxIdea.png" className='img-fluid'/>
             </div>
         </div>
     );

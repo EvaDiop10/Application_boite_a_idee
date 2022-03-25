@@ -1,13 +1,13 @@
-import Formulaire from "./components/Formulaire";
 import Header from "./components/Header";
 import Filtre from "./components/Filtre";
+import SectionFormulaire from "./components/SectionFormulaire";
 
 
 const App = () =>{
         return(
         <div className="Container">
                 <Header></Header>
-                <Formulaire></Formulaire>
+                <SectionFormulaire></SectionFormulaire>
                 <Filtre/>
         </div>
         );
