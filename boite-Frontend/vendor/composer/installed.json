@@ -1,0 +1,109 @@
+{
+    "packages": [
+        {
+            "name": "gufy/google-charts",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mgufrone/google-charts.git",
+                "reference": "aa1f2bc3f650ccf7e563806778fee8af84c6a1ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mgufrone/google-charts/zipball/aa1f2bc3f650ccf7e563806778fee8af84c6a1ef",
+                "reference": "aa1f2bc3f650ccf7e563806778fee8af84c6a1ef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.2.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~2.2",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "time": "2014-07-22T03:15:54+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Gufy\\GoogleCharts\\": "src/"
+                },
+                "classmap": [
+                    "src/migrations",
+                    "tests/WorkbenchTestCase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Mochamad Gufron",
+                    "email": "mgufronefendi@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mgufrone/google-charts/issues",
+                "source": "https://github.com/mgufrone/google-charts/tree/master"
+            },
+            "install-path": "../gufy/google-charts"
+        },
+        {
+            "name": "illuminate/support",
+            "version": "v4.2.17",
+            "version_normalized": "4.2.17.0",
+            "target-dir": "Illuminate/Support",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/support.git",
+                "reference": "db61f3f6d507ce417ca993e1f93585db7efd8b12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/db61f3f6d507ce417ca993e1f93585db7efd8b12",
+                "reference": "db61f3f6d507ce417ca993e1f93585db7efd8b12",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "jeremeamia/superclosure": "~1.0.1",
+                "patchwork/utf8": "~1.1"
+            },
+            "time": "2015-01-27T20:51:43+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "files": [
+                    "Illuminate/Support/helpers.php"
+                ],
+                "psr-0": {
+                    "Illuminate\\Support": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/illuminate/support/tree/4.2"
+            },
+            "install-path": "../illuminate/support/Illuminate/Support"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

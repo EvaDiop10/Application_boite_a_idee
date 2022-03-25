@@ -8,7 +8,8 @@ const SectionFormulaire = () => {
                 <Formulaire></Formulaire>
             </div>
             <div className="col-6">
-                <image src="/undraw_Collecting_re_lp6p.png" className='img-fluide'/>
+                <image src="/im
+                Idee.png" className='img-fluide'/>
             </div>
         </div>
     );

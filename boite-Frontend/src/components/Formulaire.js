@@ -23,7 +23,7 @@ const Formulaire = () =>{
     const Submit = ()=>{
         let idee = {libelle,description,statut}
          axios.post('http://127.0.0.1:8000/api/idees',idee)
-        
+         window.location.reload(false);
     }
 
     return(

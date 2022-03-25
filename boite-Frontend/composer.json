@@ -1,0 +1,5 @@
+{
+    "require": {
+        "gufy/google-charts": "dev-master"
+    }
+}
